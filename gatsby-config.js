@@ -2,10 +2,33 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@codewaseem`,
+    siteUrl: `https://frontend-showcase.codewaseem.tech`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-axe`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://frontend-showcase.codewaseem.tech`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/intl`,
+        // supported language
+        languages: [`en`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/ko` when connecting `/`
+        // redirect: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

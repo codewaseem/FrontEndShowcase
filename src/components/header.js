@@ -1,8 +1,7 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { injectIntl, Link } from "gatsby-plugin-intl"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ intl }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -24,19 +23,11 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          {intl.formatMessage({ id: "site_title" })}
         </Link>
       </h1>
     </div>
   </header>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default injectIntl(Header)

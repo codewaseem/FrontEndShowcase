@@ -1,5 +1,5 @@
-import { injectIntl, Link } from "gatsby-plugin-intl"
-import React from "react"
+import { injectIntl, Link } from "gatsby-plugin-intl";
+import React from "react";
 
 const Header = ({ intl }) => (
   <header
@@ -28,6 +28,6 @@ const Header = ({ intl }) => (
       </h1>
     </div>
   </header>
-)
+);
 
-export default injectIntl(Header)
+export default injectIntl(Header);

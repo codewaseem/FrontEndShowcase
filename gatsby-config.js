@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://frontend-showcase.codewaseem.tech`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-axe`,
     `gatsby-plugin-sitemap`,
@@ -54,4 +55,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

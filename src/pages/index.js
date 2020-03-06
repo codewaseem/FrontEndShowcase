@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl";
 
 const IndexPage = ({ intl }) => (
   <Layout>
@@ -24,6 +24,6 @@ const IndexPage = ({ intl }) => (
       <FormattedMessage id="go_page2" />
     </Link>
   </Layout>
-)
+);
 
-export default injectIntl(IndexPage)
+export default injectIntl(IndexPage);

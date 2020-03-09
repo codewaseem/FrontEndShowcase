@@ -1,19 +1,32 @@
 import React from "react";
-import { View, Text } from "react-native";
-import { inject, observer } from "mobx-react";
+import Link from "gatsby-link";
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
-interface indexProps {}
+const styles = StyleSheet.create({
+  box: { padding: 10, margin: 10, borderWidth: 1, borderColor: "black" },
+  text: { fontWeight: "bold", color: "red" },
+  button: {
+    marginVertical: 40,
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: "black",
+    backgroundColor: "lightgrey",
+    alignItems: "center",
+  },
+  buttonText: { fontWeight: "bold", color: "black" },
+});
 
-@inject("counterStore")
-@observer
-class Index extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text>Hello, World </Text>
-      </View>
-    );
-  }
-}
+const IndexPage = () => (
+  <View style={styles.box}>
+    <Text style={styles.text}>
+      Hi this is React-Native-Web rendered by Gatsby
+    </Text>
+    <TouchableOpacity style={styles.button} onPress={() => alert("it works")}>
+      <Text style={styles.buttonText}>Button</Text>
+    </TouchableOpacity>
+    <Link to="/page-2/">Go to page 2</Link>
+  </View>
+);
 
-export default Index;
+export default IndexPage;

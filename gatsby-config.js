@@ -23,7 +23,7 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/intl`,
         // supported language
-        languages: [`en`, `ar`, `kn`, `ur`],
+        languages: [`en`],
         // language file path
         defaultLanguage: `en`,
         // option to redirect to `/ko` when connecting `/`
@@ -51,6 +51,8 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-react-native-web`,
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
